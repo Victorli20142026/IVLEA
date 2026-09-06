@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黑白摄影画廊 · Monochrome Gallery</title>
+  <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">◼ 黑白摄影画廊</div>
+    <div class="nav-links">
+      <a href="/" class="active">作品展示</a>
+      <a href="/upload.html" class="btn-upload">上传作品</a>
+      <a href="/admin.html">管理后台</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">黑白作品展示</h1>
+    <p class="page-subtitle">纯粹的光影,永恒的瞬间 — 仅收录黑白摄影作品</p>
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <div>加载中...</div>
+    </div>
+    <div id="gallery" class="gallery"></div>
+    <div id="empty" class="empty hidden">
+      <div class="icon">🖼️</div>
+      <p>还没有作品,快来上传第一张吧!</p>
+    </div>
+  </div>
+
+  <!-- 灯箱 -->
+  <div id="lightbox" class="lightbox">
+    <button class="close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="/js/gallery.js?v=2"></script>
+</body>
+</html>

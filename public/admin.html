@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理后台 · 黑白摄影画廊</title>
+  <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">◼ 黑白摄影画廊</div>
+    <div class="nav-links">
+      <a href="/">作品展示</a>
+      <a href="/upload.html" class="btn-upload">上传作品</a>
+      <a href="/admin.html" class="active">管理后台</a>
+    </div>
+  </nav>
+
+  <!-- 登录界面 -->
+  <div id="loginView" class="login-wrap">
+    <div class="form-card" style="max-width:400px;">
+      <h1 class="page-title" style="font-size:22px;">管理员登录</h1>
+      <p class="page-subtitle" style="margin-bottom:20px;">审核上传的摄影作品</p>
+      <div id="alert"></div>
+      <form id="loginForm">
+        <div class="form-group">
+          <label>用户名</label>
+          <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+          <label>密码</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">登录</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 审核界面 -->
+  <div id="adminView" class="container hidden">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+      <div>
+        <h1 class="page-title">黑白作品审核</h1>
+        <p class="page-subtitle" style="margin-bottom:0;">审核上传的作品,彩色照片请予以拒绝</p>
+      </div>
+      <button class="btn btn-ghost" onclick="logout()">退出登录</button>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-status="pending">待审核 <span class="count" id="cnt-pending">0</span></button>
+      <button class="tab" data-status="approved">已通过 <span class="count" id="cnt-approved">0</span></button>
+      <button class="tab" data-status="rejected">已拒绝 <span class="count" id="cnt-rejected">0</span></button>
+    </div>
+
+    <div id="list" class="review-list"></div>
+  </div>
+
+  <!-- 灯箱 -->
+  <div id="lightbox" class="lightbox">
+    <button class="close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="/js/admin.js?v=2"></script>
+</body>
+</html>

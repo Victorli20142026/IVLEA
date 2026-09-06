@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上传黑白作品 · 黑白摄影画廊</title>
+  <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">◼ 黑白摄影画廊</div>
+    <div class="nav-links">
+      <a href="/">作品展示</a>
+      <a href="/upload.html" class="btn-upload">上传作品</a>
+      <a href="/admin.html">管理后台</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="form-card">
+      <h1 class="page-title" style="font-size:24px;margin-bottom:4px;">上传黑白摄影作品</h1>
+      <p class="page-subtitle" style="margin-bottom:24px;">本画廊仅收录黑白作品,彩色照片将不予通过审核</p>
+
+      <div id="alert"></div>
+
+      <form id="uploadForm">
+        <div class="form-group">
+          <label>选择图片 *</label>
+          <div class="upload-area" id="dropZone">
+            <input type="file" id="fileInput" name="photo" accept="image/*">
+            <div class="icon">⬆️</div>
+            <div>点击或拖拽黑白图片到此处</div>
+            <div class="hint">支持 JPG / PNG / GIF / WEBP,最大 20MB</div>
+          </div>
+          <div class="upload-preview hidden" id="preview">
+            <img id="previewImg" src="" alt="预览">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>作品标题 *</label>
+          <input type="text" id="title" name="title" placeholder="给你的黑白作品起个名字" required>
+        </div>
+
+        <div class="form-group">
+          <label>作者署名 *</label>
+          <input type="text" id="author" name="author" placeholder="你的名字或昵称" required>
+        </div>
+
+        <div class="form-group">
+          <label>作品描述</label>
+          <textarea id="description" name="description" placeholder="拍摄灵感、地点、故事...(可选)"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
+            <input type="checkbox" id="confirmBW" required style="margin-top:4px;">
+            <span style="font-weight:normal;color:var(--text-dim);font-size:14px;line-height:1.5;">
+              我确认上传的是<strong style="color:var(--text);">黑白摄影作品</strong>,彩色照片将无法通过审核。
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+          提交审核
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/upload.js?v=2"></script>
+</body>
+</html>
