@@ -10,8 +10,10 @@ services:
         value: 7915911eaa9aaa90697e7a3af8a9c0c3
       - key: NODE_ENV
         value: production
-      - key: DATABASE_URL
-        sync: false
+      - key: ADMIN_USERNAME
+        value: V
+      - key: ADMIN_PASSWORD
+        value: qyjrUp-0hyhwo-ripzec
       - key: CLOUDINARY_CLOUD_NAME
         sync: false
       - key: CLOUDINARY_API_KEY
