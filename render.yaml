@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: photo-gallery
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: JWT_SECRET
+        value: 7915911eaa9aaa90697e7a3af8a9c0c3
+      - key: NODE_ENV
+        value: production
