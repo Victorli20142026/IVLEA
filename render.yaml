@@ -10,3 +10,11 @@ services:
         value: 7915911eaa9aaa90697e7a3af8a9c0c3
       - key: NODE_ENV
         value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
